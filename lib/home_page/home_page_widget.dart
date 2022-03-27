@@ -1,7 +1,8 @@
+import '../auth/auth_util.dart';
 import '../backend/backend.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
 import '../lista/lista_widget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -33,52 +34,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).primaryColor,
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
-          borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
-          icon: Icon(
-            Icons.add_box_outlined,
-            color: Colors.black,
-            size: 30,
-          ),
-          onPressed: () async {
-            await Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => ListaWidget(),
-              ),
-            );
-          },
-        ),
         title: Text(
           'Criar Produto',
           style: FlutterFlowTheme.of(context).title1,
         ),
-        actions: [
-          Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 15, 0),
-            child: FlutterFlowIconButton(
-              borderColor: Colors.transparent,
-              borderRadius: 30,
-              borderWidth: 1,
-              buttonSize: 60,
-              icon: Icon(
-                Icons.add_box_outlined,
-                color: Colors.black,
-                size: 30,
-              ),
-              onPressed: () async {
-                final produtoCreateData = createProdutoRecordData(
-                  nome: textController1.text,
-                  valor: double.parse(textController2.text),
-                );
-                await ProdutoRecord.collection.doc().set(produtoCreateData);
-              },
-            ),
-          ),
-        ],
+        actions: [],
         centerTitle: true,
         elevation: 4,
       ),
@@ -158,6 +118,58 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     ),
                   ),
                 ],
+              ),
+              FFButtonWidget(
+                onPressed: () async {
+                  final produtoCreateData = createProdutoRecordData(
+                    nome: textController1.text,
+                    valor: double.parse(textController2.text),
+                  );
+                  await ProdutoRecord.collection.doc().set(produtoCreateData);
+                },
+                text: 'Adicionar',
+                options: FFButtonOptions(
+                  width: 130,
+                  height: 40,
+                  color: FlutterFlowTheme.of(context).primaryColor,
+                  textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                        fontFamily: 'Poppins',
+                        color: Colors.white,
+                      ),
+                  borderSide: BorderSide(
+                    color: Colors.transparent,
+                    width: 1,
+                  ),
+                  borderRadius: 12,
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 60, 0, 0),
+                child: FFButtonWidget(
+                  onPressed: () async {
+                    await Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ListaWidget(),
+                      ),
+                    );
+                  },
+                  text: 'Produtos',
+                  options: FFButtonOptions(
+                    width: 130,
+                    height: 40,
+                    color: FlutterFlowTheme.of(context).primaryColor,
+                    textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                          fontFamily: 'Poppins',
+                          color: Colors.white,
+                        ),
+                    borderSide: BorderSide(
+                      color: Colors.transparent,
+                      width: 1,
+                    ),
+                    borderRadius: 12,
+                  ),
+                ),
               ),
             ],
           ),
