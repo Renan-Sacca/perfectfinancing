@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "951014304864",
+    "project_id": "perfect-financing",
+    "storage_bucket": "perfect-financing.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951014304864:android:d48c71dcbeace1ef922705",
+        "android_client_info": {
+          "package_name": "com.flutterflow.perfectfinancing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "951014304864-e1cnjj06v85s01ms6afcggmhl59tm0kr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flutterflow.perfectfinancing",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "951014304864-sc72jeds6irtdrhu3irs2lr6e3d8cq8q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACJ7Z2UZDjuK7jeA3WcbkzU4J5ixwXY-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "951014304864-sc72jeds6irtdrhu3irs2lr6e3d8cq8q.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "951014304864-mclc00vi8ebev29r69fj52r6v0fcdeh2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.flutterflow.perfectfinancing"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
