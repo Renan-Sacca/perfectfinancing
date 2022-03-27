@@ -54,7 +54,7 @@ class _LoginWidgetState extends State<LoginWidget> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Welcome To',
+                  'Bem Vindo ao',
                   style: FlutterFlowTheme.of(context).title1.override(
                         fontFamily: 'Lexend Deca',
                         color: Colors.white,
@@ -123,14 +123,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     children: [
                                       Text(
                                         'Login',
-                                        style: FlutterFlowTheme.of(context)
-                                            .title1
-                                            .override(
-                                              fontFamily: 'Lexend Deca',
-                                              color: Colors.white,
-                                              fontSize: 24,
-                                              fontWeight: FontWeight.bold,
-                                            ),
+                                        style:
+                                            FlutterFlowTheme.of(context).title1,
                                       ),
                                     ],
                                   ),
