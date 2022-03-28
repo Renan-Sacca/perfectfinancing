@@ -97,7 +97,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                         text: 'Login',
                       ),
                       Tab(
-                        text: 'Create Account',
+                        text: 'Crie sua conta',
                       ),
                     ],
                   ),
@@ -137,7 +137,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Text(
-                                        'Enter your details to continue.',
+                                        'Insira seus dados para continuar',
                                         textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyText2
@@ -164,7 +164,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                               loginEmailAddressController,
                                           obscureText: false,
                                           decoration: InputDecoration(
-                                            labelText: 'Email Address',
+                                            labelText: 'Endereço de Email',
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -175,8 +175,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                       fontWeight:
                                                           FontWeight.normal,
                                                     ),
-                                            hintText:
-                                                'Enter your email here...',
+                                            hintText: 'Digite seu email aqui.',
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -231,7 +230,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           controller: loginPasswordController,
                                           obscureText: !loginPasswordVisibility,
                                           decoration: InputDecoration(
-                                            labelText: 'Password',
+                                            labelText: 'Senha',
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -242,8 +241,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                       fontWeight:
                                                           FontWeight.normal,
                                                     ),
-                                            hintText:
-                                                'Enter your email here...',
+                                            hintText: 'Digite sua senha aqui.',
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -349,8 +347,23 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0, 20, 0, 0),
                                   child: FFButtonWidget(
-                                    onPressed: () {
-                                      print('forgotPassword pressed ...');
+                                    onPressed: () async {
+                                      if (loginEmailAddressController
+                                          .text.isEmpty) {
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(
+                                          SnackBar(
+                                            content: Text(
+                                              'Email required!',
+                                            ),
+                                          ),
+                                        );
+                                        return;
+                                      }
+                                      await resetPassword(
+                                        email: loginEmailAddressController.text,
+                                        context: context,
+                                      );
                                     },
                                     text: 'Forgot Password?',
                                     options: FFButtonOptions(
@@ -509,7 +522,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Text(
-                                        'Create Account',
+                                        'Crie sua conta',
                                         style: FlutterFlowTheme.of(context)
                                             .title1
                                             .override(
