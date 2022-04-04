@@ -5,6 +5,7 @@ import '../flutter_flow/flutter_flow_widgets.dart';
 import '../home_page/home_page_widget.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -54,7 +55,9 @@ class _LoginWidgetState extends State<LoginWidget> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Bem Vindo ao',
+                  FFLocalizations.of(context).getText(
+                    'qh2dd5cq' /* Bem Vindo ao */,
+                  ),
                   style: FlutterFlowTheme.of(context).title1.override(
                         fontFamily: 'Lexend Deca',
                         color: Colors.white,
@@ -94,10 +97,14 @@ class _LoginWidgetState extends State<LoginWidget> {
                     indicatorColor: Colors.white,
                     tabs: [
                       Tab(
-                        text: 'Login',
+                        text: FFLocalizations.of(context).getText(
+                          'wedl9kye' /* Login */,
+                        ),
                       ),
                       Tab(
-                        text: 'Crie sua conta',
+                        text: FFLocalizations.of(context).getText(
+                          '8emuhdhl' /* Crie sua conta */,
+                        ),
                       ),
                     ],
                   ),
@@ -122,7 +129,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Text(
-                                        'Login',
+                                        FFLocalizations.of(context).getText(
+                                          'ai6cfwmq' /* Login */,
+                                        ),
                                         style:
                                             FlutterFlowTheme.of(context).title1,
                                       ),
@@ -137,7 +146,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Text(
-                                        'Insira seus dados para continuar',
+                                        FFLocalizations.of(context).getText(
+                                          'z2a6i1m9' /* Insira seus dados para continu... */,
+                                        ),
                                         textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyText2
@@ -164,7 +175,11 @@ class _LoginWidgetState extends State<LoginWidget> {
                                               loginEmailAddressController,
                                           obscureText: false,
                                           decoration: InputDecoration(
-                                            labelText: 'Endereço de Email',
+                                            labelText:
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                              'iywhcksj' /* Endereço de Email */,
+                                            ),
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -175,7 +190,11 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                       fontWeight:
                                                           FontWeight.normal,
                                                     ),
-                                            hintText: 'Digite seu email aqui.',
+                                            hintText:
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                              'a2m3vk6f' /* Digite seu email aqui. */,
+                                            ),
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -230,7 +249,11 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           controller: loginPasswordController,
                                           obscureText: !loginPasswordVisibility,
                                           decoration: InputDecoration(
-                                            labelText: 'Senha',
+                                            labelText:
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                              'sbcd4tzs' /* Senha */,
+                                            ),
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -241,7 +264,11 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                       fontWeight:
                                                           FontWeight.normal,
                                                     ),
-                                            hintText: 'Digite sua senha aqui.',
+                                            hintText:
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                              'nvksydpo' /* Digite sua senha aqui. */,
+                                            ),
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -321,7 +348,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                         (r) => false,
                                       );
                                     },
-                                    text: 'Login',
+                                    text: FFLocalizations.of(context).getText(
+                                      'e45tuvji' /* Login */,
+                                    ),
                                     options: FFButtonOptions(
                                       width: 230,
                                       height: 50,
@@ -365,7 +394,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                         context: context,
                                       );
                                     },
-                                    text: 'Forgot Password?',
+                                    text: FFLocalizations.of(context).getText(
+                                      'boupjz4i' /* Forgot Password? */,
+                                    ),
                                     options: FFButtonOptions(
                                       width: 200,
                                       height: 30,
@@ -391,7 +422,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0, 8, 0, 0),
                                   child: AutoSizeText(
-                                    'OR',
+                                    FFLocalizations.of(context).getText(
+                                      'l6zhftoo' /* OR */,
+                                    ),
                                     textAlign: TextAlign.center,
                                     style: FlutterFlowTheme.of(context)
                                         .title2
@@ -407,7 +440,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0, 8, 0, 0),
                                   child: AutoSizeText(
-                                    'Use a Social Platform to Login',
+                                    FFLocalizations.of(context).getText(
+                                      '17i1xxzj' /* Use a Social Platform to Login */,
+                                    ),
                                     textAlign: TextAlign.center,
                                     style: FlutterFlowTheme.of(context)
                                         .bodyText2
@@ -522,7 +557,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Text(
-                                        'Crie sua conta',
+                                        FFLocalizations.of(context).getText(
+                                          'czy6qbls' /* Crie sua conta */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .title1
                                             .override(
@@ -543,7 +580,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Text(
-                                        'Enter the information below to get started.',
+                                        FFLocalizations.of(context).getText(
+                                          'zr56rg6w' /* Enter the information below to... */,
+                                        ),
                                         textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyText2
@@ -569,7 +608,11 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           controller: createEmailController,
                                           obscureText: false,
                                           decoration: InputDecoration(
-                                            labelText: 'Email Address',
+                                            labelText:
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                              '0lxhs8uv' /* Email Address */,
+                                            ),
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -581,7 +624,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                           FontWeight.normal,
                                                     ),
                                             hintText:
-                                                'Enter your email here...',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                              'h7mpehew' /* Enter your email here... */,
+                                            ),
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -637,7 +683,11 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           obscureText:
                                               !createPasswordVisibility,
                                           decoration: InputDecoration(
-                                            labelText: 'Password',
+                                            labelText:
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                              'm3g0q259' /* Password */,
+                                            ),
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -648,7 +698,11 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                       fontWeight:
                                                           FontWeight.normal,
                                                     ),
-                                            hintText: 'Enter your password',
+                                            hintText:
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                              'ikfu10ri' /* Enter your password */,
+                                            ),
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -718,7 +772,11 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           obscureText:
                                               !confirmPasswordVisibility,
                                           decoration: InputDecoration(
-                                            labelText: 'Confirm Password',
+                                            labelText:
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                              '1wlqzlv1' /* Confirm Password */,
+                                            ),
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -730,7 +788,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                           FontWeight.normal,
                                                     ),
                                             hintText:
-                                                'Enter the same password as above.',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                              'eb1ylq5u' /* Enter the same password as abo... */,
+                                            ),
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyText1
@@ -823,7 +884,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                         (r) => false,
                                       );
                                     },
-                                    text: 'Create Account',
+                                    text: FFLocalizations.of(context).getText(
+                                      'jtsp3uuv' /* Create Account */,
+                                    ),
                                     options: FFButtonOptions(
                                       width: 230,
                                       height: 50,
@@ -849,7 +912,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0, 16, 0, 0),
                                   child: AutoSizeText(
-                                    'OR',
+                                    FFLocalizations.of(context).getText(
+                                      'kaop5scz' /* OR */,
+                                    ),
                                     textAlign: TextAlign.center,
                                     style: FlutterFlowTheme.of(context)
                                         .title2
@@ -865,7 +930,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0, 8, 0, 0),
                                   child: AutoSizeText(
-                                    'Use a Social Platform to Create Account',
+                                    FFLocalizations.of(context).getText(
+                                      'iz7k1a39' /* Use a Social Platform to Creat... */,
+                                    ),
                                     textAlign: TextAlign.center,
                                     style: FlutterFlowTheme.of(context)
                                         .bodyText2

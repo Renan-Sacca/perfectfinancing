@@ -16,3 +16,31 @@ class TesteCall {
     );
   }
 }
+
+class NubankCall {
+  static Future<ApiCallResponse> call() {
+    return ApiManager.instance.makeApiCall(
+      callName: 'nubank',
+      apiUrl: 'https://904a-200-10-239-4.ngrok.io/nubank',
+      callType: ApiCallType.GET,
+      headers: {},
+      params: {},
+      returnBody: true,
+    );
+  }
+}
+
+class NubankdCall {
+  static Future<ApiCallResponse> call({
+    int id,
+  }) {
+    return ApiManager.instance.makeApiCall(
+      callName: 'nubankd',
+      apiUrl: 'https://904a-200-10-239-4.ngrok.io/nubank/${id}',
+      callType: ApiCallType.GET,
+      headers: {},
+      params: {},
+      returnBody: true,
+    );
+  }
+}
