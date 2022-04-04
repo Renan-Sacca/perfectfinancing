@@ -6,6 +6,7 @@ import '../flutter_flow/flutter_flow_widgets.dart';
 import '../lista/lista_widget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePageWidget extends StatefulWidget {
@@ -35,7 +36,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         backgroundColor: FlutterFlowTheme.of(context).primaryColor,
         automaticallyImplyLeading: false,
         title: Text(
-          'Criar Produto',
+          FFLocalizations.of(context).getText(
+            's0uneym5' /* Criar Produto */,
+          ),
           style: FlutterFlowTheme.of(context).title1,
         ),
         actions: [],
@@ -57,7 +60,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       controller: textController1,
                       obscureText: false,
                       decoration: InputDecoration(
-                        hintText: 'Digite o nome do produto: ',
+                        hintText: FFLocalizations.of(context).getText(
+                          'ip2b2azd' /* Digite o nome do produto:  */,
+                        ),
                         enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
                             color: Color(0x00000000),
@@ -92,7 +97,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       controller: textController2,
                       obscureText: false,
                       decoration: InputDecoration(
-                        hintText: 'Digite o valor:',
+                        hintText: FFLocalizations.of(context).getText(
+                          'ctkrs62y' /* Digite o valor: */,
+                        ),
                         enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
                             color: Color(0x00000000),
@@ -127,7 +134,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   );
                   await ProdutoRecord.collection.doc().set(produtoCreateData);
                 },
-                text: 'Adicionar',
+                text: FFLocalizations.of(context).getText(
+                  'bcgi8ids' /* Adicionar */,
+                ),
                 options: FFButtonOptions(
                   width: 130,
                   height: 40,
@@ -154,7 +163,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       ),
                     );
                   },
-                  text: 'Produtos',
+                  text: FFLocalizations.of(context).getText(
+                    'x4ymeija' /* Produtos */,
+                  ),
                   options: FFButtonOptions(
                     width: 130,
                     height: 40,

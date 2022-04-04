@@ -1,14 +1,14 @@
 import '../auth/auth_util.dart';
-import '../backend/api_requests/api_calls.dart';
 import '../backend/backend.dart';
+import '../dados/dados_widget.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../home_page/home_page_widget.dart';
 import '../login/login_widget.dart';
-import '../teste/teste_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ListaWidget extends StatefulWidget {
@@ -70,8 +70,9 @@ class _ListaWidgetState extends State<ListaWidget> {
                         child: SizedBox(
                           width: 50,
                           height: 50,
-                          child: CircularProgressIndicator(
+                          child: SpinKitCircle(
                             color: FlutterFlowTheme.of(context).primaryColor,
+                            size: 50,
                           ),
                         ),
                       );
@@ -125,7 +126,9 @@ class _ListaWidgetState extends State<ListaWidget> {
                     (r) => false,
                   );
                 },
-                text: 'Deslogar',
+                text: FFLocalizations.of(context).getText(
+                  'wrf9ilwq' /* Deslogar */,
+                ),
                 options: FFButtonOptions(
                   width: 130,
                   height: 40,
@@ -145,15 +148,16 @@ class _ListaWidgetState extends State<ListaWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                 child: FFButtonWidget(
                   onPressed: () async {
-                    await TesteCall.call();
                     await Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => TesteWidget(),
+                        builder: (context) => DadosWidget(),
                       ),
                     );
                   },
-                  text: 'api',
+                  text: FFLocalizations.of(context).getText(
+                    '2r3j63fs' /* api */,
+                  ),
                   options: FFButtonOptions(
                     width: 130,
                     height: 40,
